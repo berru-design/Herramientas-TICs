@@ -4,4 +4,7 @@
 name: Ejecutar pruebas
   run: npm test
 
+ci.yml 
+  name: Despliegue simulado
+  run: echo "Despliegue exitoso - Todo listo para producción
 
