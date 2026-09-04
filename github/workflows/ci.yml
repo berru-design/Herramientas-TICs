@@ -1,10 +1,32 @@
-- name: Instalar dependencias
-  run: npm install
+name: CI
 
-name: Ejecutar pruebas
-  run: npm test
+on:
+  push:
 
-ci.yml 
-  name: Despliegue simulado
+    branches: [ main ]
+
+  pull_request:
+
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v4
+
+    - name: Instalar dependencias
+
+      run: npm install
+
+    - name: Ejecutar pruebas
+
+      run: npm test
+name: Despliegue simulado
   run: echo "Despliegue exitoso - Todo listo para producción
+
 
